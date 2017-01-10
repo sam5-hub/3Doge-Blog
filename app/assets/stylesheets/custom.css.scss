@@ -1,14 +1,19 @@
 $navbar-default-bg: black;
 
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+body {
+    
+    margin :0px;
+}
 #brand-logo {
     float :left;
     font-weight : bold;
     letter-spacing: -1px;
     font-size : 1.7em;  
     text-transform : uppercase;
+    color:#fff;
 }
 
 .center {
@@ -35,9 +40,11 @@ $navbar-default-bg: black;
 .btn-xlarge {
     
     background-color : black;
+    border-color : transparent;
     color : #fff;
-    font-size : 1.7em;  
-    
+}
+.btn-xlarge a:visited {
+    color : #fff;
 }
 footer {
     
