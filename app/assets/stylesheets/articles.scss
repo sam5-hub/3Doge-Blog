@@ -1,3 +1,31 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.articles-big-title {
+
+    margin-bottom: 20px;
+    font-size: 1.9em;
+}
+.article-description {
+    color: red;
+    margin: 0px;
+}
+.article-action {
+
+    border-top: 1px solid #eaeaea;
+    padding-top : 20px;
+    margin-top: 10px;
+}
+.article-title {
+    font-size: 1.8em;
+    color: seagreen;
+
+}
+.article-body {
+    border-top: 1px solid #eaeaea;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    margin-top: 15px;
+
+}

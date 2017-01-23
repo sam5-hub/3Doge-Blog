@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update
-    if @article.save
+    if @article.update(article_params)
       flash[:success] = "Article was successfully updated."
       redirect_to article_path(@article)
     else

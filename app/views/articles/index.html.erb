@@ -1,29 +1,24 @@
-<p id="notice"><%= notice %></p>
+<h2 class = "center articles-big-title">Articles List</h2>
+ <% @articles.each do |article| %>
 
-<h1>Articles</h1>
+  <div class = "well well-lg col-xs-10 col-xs-offset-1">
+      <div class = "article-title">
+          <%= article.title %>
+      </div>
+      <div class = "article-body">
+          <%= simple_format(truncate(article.description, length: 150))  %>
+      </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <div class = "article-action">
 
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.description %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Article', new_article_path %>
+          <%= link_to 'Edit', edit_article_path(article), 
+          class: "btn btn-xs btn-primary" %>
+          
+          <%= link_to 'Delete', article_path(article), 
+          method: :delete, 
+          data: { confirm: "Are you sure you want to delete the article"},
+          class: "btn btn-xs btn-danger " %>
+  
+     </div>
+  </div>
+<% end %>
