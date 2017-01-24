@@ -1,5 +1,6 @@
 <h2 align = "center">Title: <%= @article.title %></h2>
 <div class = "well col-xs-8 col-xs-offset-2">
+  <%= render 'users/user_info', user: @article.user, well: nil%>
   <h4 class = "center article-description"><strong>Description:</strong><h4>
   <hr>
   <%= simple_format(@article.description) %>

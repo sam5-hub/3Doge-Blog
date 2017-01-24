@@ -1,0 +1,13 @@
+<h1 class="center">Welcome to <%= @user.username %>'s page</h1>
+<div class="row">
+    <div class="col-xs-6 col-xs-offset-3 center">
+        <%= gravatar_for(@user, {size: 120}) %>
+    </div>
+</div>
+
+<h2 class="center"><%= @user.username %>'s articles </h2>
+
+<%= render 'articles/article_list', obj: @user_articles %>
+<div class="center">
+<%= will_paginate @user_articles %>
+</div>

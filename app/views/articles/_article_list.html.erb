@@ -1,0 +1,25 @@
+<% obj.each do |article| %>
+  <div class = "well well-lg col-xs-10 col-xs-offset-1">
+      <div class = "article-title">
+          <%= article.title %>
+      </div>
+      <div class = "article-body">
+          <%= simple_format(truncate(article.description, length: 150))  %>
+      </div>
+
+      <div class = "article-action">
+
+          <%= link_to 'Edit', edit_article_path(article), 
+          class: "btn btn-xs btn-primary" %>
+          
+          <%= link_to 'Delete', article_path(article), 
+          method: :delete, 
+          data: { confirm: "Are you sure you want to delete the article"},
+          class: "btn btn-xs btn-danger " %>
+
+          <%= link_to 'Show', article_path(article),
+            class: "btn btn-xs btn-success" %>
+  
+     </div>
+  </div>
+<% end %>

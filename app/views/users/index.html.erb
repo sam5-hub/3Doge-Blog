@@ -1,0 +1,11 @@
+<h1 align="center">All Alpha Bloggers</h1>
+<div align="center">
+    <% @users.each do |user| %>
+        <%= render 'user_info', user: user, well: :well%>
+    <% end %>
+    <div class="center">
+         <%= will_paginate @users %>
+    </div>
+</div>
+
+
